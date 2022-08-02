@@ -22,6 +22,12 @@ body{
 
 }
 
+.wrapper .input-field{
+    z-index: -999;
+    opacity: 0;
+    position: absolute;
+}
+
 .wrapper .content-box {
     padding: 13px 20px 0;
     border-radius: 10px;
