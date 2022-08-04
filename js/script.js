@@ -12,6 +12,8 @@ timeLeft = maxTime,
 charIndex = mistakes = isTyping = 0;
 
 function randomParagraph() {
+
+    saveText();
     let randIndex = Math.floor(Math.random() * paragraphs.length);
     typingText.innerHTML = "";
     paragraphs[randIndex].split("").forEach(span => {
@@ -22,6 +24,7 @@ function randomParagraph() {
     document.addEventListener("keydown", () => inpField.focus());
     typingText.addEventListener("click", () => inpField.focus());
 }
+
 
 function initTyping() {
     const characters = typingText.querySelectorAll("span");
@@ -83,4 +86,4 @@ function resetGame() {
 
 randomParagraph();
 inpField.addEventListener("input", initTyping);
-tryAgainBtn.addEventListener("click", resetGame);
+//tryAgainBtn.addEventListener("click", resetGame);

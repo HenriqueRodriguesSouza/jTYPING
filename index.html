@@ -9,6 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <div class="typeText" id="testeteste" >
+    <input type="text" class="manual" id="manualText" placeholder="Digite aqui o texto que queira utilizar ou deixa esse espaço em branco e clique em continuar." value="">
+    <button class="insertButton" onclick="saveText()">Insert</button>
+    </div>
     <div class="wrapper">
         <input type="text" class="input-field">
         <div class="content-box">
@@ -34,7 +38,7 @@
                         <span>0</span>
                     </li>
                 </ul>
-                <button>Try Again</button>
+                <button onclick="resetGame()">Try Again</button>
             </div>
         </div>
     </div>
