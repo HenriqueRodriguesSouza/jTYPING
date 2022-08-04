@@ -37,6 +37,7 @@ function saveText(){
     } else {
         paragraphs = savingText.split();
         console.log(paragraphs); 
+        
     }
     //e por ultimo, se houver algum texto escrito no campo manualText ele o sobrepoe em cima de paragraphs o transformando em um array devido a logica da funcao randomParagraph
 }

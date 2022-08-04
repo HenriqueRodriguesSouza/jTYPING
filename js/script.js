@@ -21,8 +21,8 @@ function randomParagraph() {
         typingText.innerHTML += spanTag;
     });
     typingText.querySelectorAll("span")[0].classList.add("active");
-    document.addEventListener("keydown", () => inpField.focus());
-    typingText.addEventListener("click", () => inpField.focus());
+    //document.addEventListener("keydown", () => inpField.focus());
+    //typingText.addEventListener("click", () => inpField.focus());
 }
 
 
