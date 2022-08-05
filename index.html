@@ -9,12 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="typeText" id="testeteste" >
-    <input type="text" class="manual" id="manualText" placeholder="Digite aqui o texto que queira utilizar ou deixa esse espaço em branco e clique em continuar." value="">
-    <button class="insertButton" onclick="saveText(), resetGame()">Insert</button>
+    <div class="typeText" id="intgame" >
+        <textarea autofocus type="text" class="manual" id="manualText" placeholder=
+"Bem vindo! 
+Esse simples projeto de um jogo de digitação usando apenas com html, css e javascript. Você tem a opção de jogar com 20 textos aleatorios de Lorem Ipsum ou com o seu texto proprio. Copie nessa area que você me lê o texto que queira digitar ou a deixa em branco para usar os textos aleatorios. Ao resetar o jogo, se optar por trocar a forma do texto, apenas apague o texto digitado neste campo para selecionar a outra opção." ></textarea>
+        <button class="insertButton" onclick="saveText(), resetGame(), hideElement()">Começar</button>
     </div>
-    <div class="wrapper">
-        <input type="text" class="input-field">
+
+    <div class="wrapper" id="game" style="display: none;"">
+        <input type="text" class="input-field" >
         <div class="content-box">
             <div class="typing-text">
                 <p></p>
@@ -38,7 +41,8 @@
                         <span>0</span>
                     </li>
                 </ul>
-                <button onclick="resetGame()">Try Again</button>
+                <button onclick="resetGame()">Tentar novamente</button>
+                <button onclick="hideElement()">Comecar novamente</button>
             </div>
         </div>
     </div>

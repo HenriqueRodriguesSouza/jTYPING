@@ -21,29 +21,8 @@ var paragraphs = [
     "A diam maecenas sed enim ut sem. Tortor dignissim convallis aenean et tortor at. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Dui accumsan sit amet nulla facilisi morbi tempus iaculis. Quisque sagittis purus sit amet volutpat. Urna duis convallis convallis tellus id interdum velit laoreet. Amet risus nullam eget felis eget nunc lobortis mattis. Tortor pretium viverra suspendisse potenti nullam ac tortor. Sed id semper risus in hendrerit. Massa vitae tortor condimentum lacinia quis vel eros.",   
     "Orci ac auctor augue mauris augue neque gravida. Pulvinar neque laoreet suspendisse interdum consectetur libero. Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Ac odio tempor orci dapibus ultrices in iaculis nunc sed. Odio tempor orci dapibus ultrices. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Pellentesque sit amet porttitor eget dolor morbi non arcu. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Dui sapien eget mi proin. Odio eu feugiat pretium nibh ipsum consequat. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. A scelerisque purus semper eget duis at. Pulvinar elementum integer enim neque volutpat ac tincidunt. Eget mi proin sed libero. Ullamcorper malesuada proin libero nunc. Varius vel pharetra vel turpis nunc eget. Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. Sodales ut etiam sit amet nisl purus in mollis."
   ];
-/*
-inputField = document.querySelector(".typeText .manualText"),
-insertForm = document.querySelector(".typeText .insertButton"),
-randomForm = document.querySelector(".typeText .randomButton");
-*/
 
-//funcao de salvar o texto se usuario colocar custom text
-function saveText(){
-    //salva em uma varialvel o valor inserido no campo de texto id manualText
-    var savingText = document.getElementById("manualText").value;
-    //faz uma conferencia logica se existe algo escrito no campo e se não ele deixa o array paragraphs como esta
-    if (savingText === "") {
-        console.log(paragraphs); //visualização de teste
-    } else {
-        paragraphs = savingText.split();
-        console.log(paragraphs); 
-        
-    }
-    //e por ultimo, se houver algum texto escrito no campo manualText ele o sobrepoe em cima de paragraphs o transformando em um array devido a logica da funcao randomParagraph
-}
-/*
-function randomText(){
-    const ramdomP = [    
+  const ramdomP = [    
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec adipiscing tristique risus nec feugiat in. Eget arcu dictum varius duis at consectetur lorem. Ac turpis egestas maecenas pharetra. Id aliquet lectus proin nibh. Enim nunc faucibus a pellentesque sit amet. Tortor at auctor urna nunc id cursus metus. Pretium nibh ipsum consequat nisl vel. Elementum curabitur vitae nunc sed velit. Vestibulum lorem sed risus ultricies tristique. Viverra maecenas accumsan lacus vel facilisis volutpat est velit. Adipiscing tristique risus nec feugiat. Sapien faucibus et molestie ac feugiat sed lectus vestibulum.",
     "In arcu cursus euismod quis viverra nibh cras pulvinar. Libero enim sed faucibus turpis in eu. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Magna ac placerat vestibulum lectus mauris ultrices. At tellus at urna condimentum mattis pellentesque. Nunc lobortis mattis aliquam faucibus purus in. Elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. In metus vulputate eu scelerisque felis imperdiet proin fermentum. Porttitor eget dolor morbi non arcu risus quis varius quam. Suspendisse sed nisi lacus sed viverra. Ut sem viverra aliquet eget sit amet tellus cras. Sapien eget mi proin sed libero enim sed. Feugiat in ante metus dictum at tempor commodo ullamcorper. Amet consectetur adipiscing elit pellentesque habitant. Lacus viverra vitae congue eu consequat ac felis. Tellus pellentesque eu tincidunt tortor aliquam. Non odio euismod lacinia at quis risus sed. Integer quis auctor elit sed vulputate mi sit amet. Enim blandit volutpat maecenas volutpat.", 
     "Odio tempor orci dapibus ultrices. Urna nunc id cursus metus aliquam. Morbi tristique senectus et netus et malesuada fames. Massa placerat duis ultricies lacus sed. Adipiscing diam donec adipiscing tristique risus nec feugiat in fermentum. Vel orci porta non pulvinar neque laoreet suspendisse interdum. Consectetur adipiscing elit duis tristique sollicitudin nibh. At lectus urna duis convallis convallis tellus id interdum. Fringilla est ullamcorper eget nulla facilisi etiam. Mattis vulputate enim nulla aliquet porttitor lacus. Fermentum iaculis eu non diam phasellus vestibulum lorem sed. Feugiat vivamus at augue eget arcu. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Nulla facilisi cras fermentum odio eu feugiat pretium. Accumsan tortor posuere ac ut consequat semper viverra nam libero. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Ut tristique et egestas quis ipsum suspendisse ultrices gravida. Sit amet risus nullam eget. Et leo duis ut diam quam nulla porttitor massa id.",
@@ -63,11 +42,38 @@ function randomText(){
     "Ornare suspendisse sed nisi lacus sed. Magna fringilla urna porttitor rhoncus dolor purus. Et ligula ullamcorper malesuada proin libero nunc consequat. Neque laoreet suspendisse interdum consectetur libero id faucibus. Scelerisque eleifend donec pretium vulputate sapien nec. Felis donec et odio pellentesque diam volutpat commodo sed. Dignissim sodales ut eu sem integer vitae justo. Nam aliquam sem et tortor consequat id porta nibh. Nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Netus et malesuada fames ac turpis egestas integer eget. Mauris augue neque gravida in. Vulputate ut pharetra sit amet aliquam id diam. Lacinia at quis risus sed vulputate. Libero id faucibus nisl tincidunt eget nullam. Vitae sapien pellentesque habitant morbi tristique senectus. Ornare quam viverra orci sagittis eu. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Eros in cursus turpis massa tincidunt dui ut ornare. Eu volutpat odio facilisis mauris sit amet massa vitae.",   
     "Mauris pharetra et ultrices neque ornare aenean euismod elementum. Quis eleifend quam adipiscing vitae proin sagittis. Integer malesuada nunc vel risus commodo viverra. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Id venenatis a condimentum vitae sapien pellentesque habitant. At ultrices mi tempus imperdiet nulla malesuada. Id eu nisl nunc mi ipsum faucibus vitae. Sit amet nulla facilisi morbi. Est placerat in egestas erat imperdiet sed euismod nisi. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Eget arcu dictum varius duis at consectetur lorem. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Convallis a cras semper auctor neque vitae tempus.",   
     "A diam maecenas sed enim ut sem. Tortor dignissim convallis aenean et tortor at. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Dui accumsan sit amet nulla facilisi morbi tempus iaculis. Quisque sagittis purus sit amet volutpat. Urna duis convallis convallis tellus id interdum velit laoreet. Amet risus nullam eget felis eget nunc lobortis mattis. Tortor pretium viverra suspendisse potenti nullam ac tortor. Sed id semper risus in hendrerit. Massa vitae tortor condimentum lacinia quis vel eros.",   
-    " Orci ac auctor augue mauris augue neque gravida. Pulvinar neque laoreet suspendisse interdum consectetur libero. Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Ac odio tempor orci dapibus ultrices in iaculis nunc sed. Odio tempor orci dapibus ultrices. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Pellentesque sit amet porttitor eget dolor morbi non arcu. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Dui sapien eget mi proin. Odio eu feugiat pretium nibh ipsum consequat. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. A scelerisque purus semper eget duis at. Pulvinar elementum integer enim neque volutpat ac tincidunt. Eget mi proin sed libero. Ullamcorper malesuada proin libero nunc. Varius vel pharetra vel turpis nunc eget. Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. Sodales ut etiam sit amet nisl purus in mollis."
+    "Orci ac auctor augue mauris augue neque gravida. Pulvinar neque laoreet suspendisse interdum consectetur libero. Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Ac odio tempor orci dapibus ultrices in iaculis nunc sed. Odio tempor orci dapibus ultrices. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Pellentesque sit amet porttitor eget dolor morbi non arcu. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Dui sapien eget mi proin. Odio eu feugiat pretium nibh ipsum consequat. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. A scelerisque purus semper eget duis at. Pulvinar elementum integer enim neque volutpat ac tincidunt. Eget mi proin sed libero. Ullamcorper malesuada proin libero nunc. Varius vel pharetra vel turpis nunc eget. Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. Sodales ut etiam sit amet nisl purus in mollis."
   ];
-    paragraphs = ramdomP;
-    console.log(paragraphs);
-}
+
+  /*
+inputField = document.querySelector(".typeText .manualText"),
+insertForm = document.querySelector(".typeText .insertButton"),
+randomForm = document.querySelector(".typeText .randomButton");
 */
-//insertForm.addEventListener("click", saveText);
-//randomForm.addEventListener("click", randomText);
+
+//funcao de salvar o texto se usuario colocar custom text
+function saveText(){
+    //salva em uma varialvel o valor inserido no campo de texto manualText
+    var savingText = document.getElementById("manualText").value;
+    //faz uma conferencia logica se existe algo escrito no campo e se não ele deixa o array paragraphs como esta salvo acima
+    if (savingText === "") {
+        paragraphs = ramdomP;
+    } else {
+        paragraphs = savingText.split(); 
+    }
+    //e por ultimo, se houver algum texto escrito no campo manualText ele o sobrepoe em cima de paragraphs o transformando em um array devido a logica da funcao randomParagraph exigir um array
+}
+
+//função para transição da tela de introdução do jogo, aonde podemos coloca o texto personalizado, e a tela do game
+function hideElement() { 
+    // armazenamento de variaveis com o ID das divs que precisamos esconder com o elemento display none
+    var intScreen = document.getElementById("intgame");
+    var gameScreen = document.getElementById("game");
+    if (intScreen.style.display === "none") {
+        intScreen.style.display = "inline";
+        gameScreen.style.display = "none";
+    } else {
+        intScreen.style.display = "none";
+        gameScreen.style.display = "inline";
+    }
+}

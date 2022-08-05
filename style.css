@@ -11,21 +11,63 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #17a2b8;
+    background: #4B0082;
 }
 
-.typeText{
-    display: block;
-}
 
-.wrapper{
+.wrapper {
    width: 770px;
    padding: 35px;
    background: #fff; 
    border-radius: 10px;   
 }
 
-.wrapper .input-field{
+.typeText{
+    text-align: center;
+    width: 770px;
+    padding: 35px;
+    background: #fff; 
+    border-radius: 10px;   
+    align-items: center;
+ }
+
+ .typeText ::placeholder{
+    text-align: center;
+
+    word-break: break-word;
+ }
+.manual{
+    width: 700px;
+    padding: 35px;
+    height: 305px;
+    padding: 13px 20px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: none;
+    overflow: hidden;
+    font-size: 20px;;
+    font-weight: 500;
+ }
+ .typeText button{
+    border: none;
+    outline: none;
+    width: 105px;
+    padding: 8px 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #4B0082;
+    transition: transform 0.3s ease;
+
+}
+
+.typeText button:active{
+    transform: scale(0.97);
+}
+
+
+.wrapper .input-field {
     z-index: -999;
     opacity: 0;
     position: absolute;
@@ -108,7 +150,7 @@ body{
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
-    background: #17a2b8;
+    background: #4B0082;
     transition: transform 0.3s ease;
 }
 .content button:active{
