@@ -1,15 +1,55 @@
 const typingText = document.querySelector(".typing-text p"),
 inpField = document.querySelector(".wrapper .input-field"),
-timeTag = document.querySelector(".time span b"),
+timeTag = document.querySelector(".time span a"),
+timeTreatment = document.querySelector(".time span b"),
 mistakeTag = document.querySelector(".mistake span"),
 wpmTag = document.querySelector(".wpm span"),
 cpmTag = document.querySelector(".cpm span"),
-tryAgainBtn = document.querySelector("button");
+tryAgainBtn = document.querySelector("button"),
+tempoSelect = document.querySelector("select");
+
 
 let timer,
 maxTime = 60,
 timeLeft = maxTime,
 charIndex = mistakes = isTyping = 0;
+
+function novoTempo(){
+    var timeSelect = document.getElementById("selecionatempo").selectedIndex;
+    switch (timeSelect) {
+        case 1:
+            maxTime = 60;
+            timeTreatment.textContent = " segundos";
+            resetGame();
+        break
+        case 2:
+            maxTime = 120;
+            timeTreatment.textContent = " segundos";
+            resetGame();
+        break
+        case 3:
+            maxTime = 300;
+            timeTreatment.textContent = " segundos";
+            resetGame();
+        break
+        case 4:
+            maxTime = 420;
+            timeTreatment.textContent = " segundos";
+            resetGame();
+        break
+        case 5:
+            maxTime = 6000;
+            timeTreatment.textContent = " segundos";
+            resetGame();
+        break
+        case 6:
+            maxTime = Infinity;
+            resetGame();
+            timeTag.textContent = "Infinito"
+            timeTreatment.textContent = "";
+        break
+    }
+}
 
 function randomParagraph() {
 

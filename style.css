@@ -21,21 +21,27 @@ body{
    background: #fff; 
    border-radius: 10px;   
 }
-
+  
 .typeText{
-    text-align: center;
     width: 770px;
     padding: 35px;
     background: #fff; 
     border-radius: 10px;   
-    align-items: center;
+    border: 1px solid #ccc;
  }
 
  .typeText ::placeholder{
-    text-align: center;
-
+    text-align: left;
     word-break: break-word;
  }
+
+ .typeText .tempoComeco {
+    padding: 12px 0;
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+ }
+ 
 .manual{
     width: 700px;
     padding: 35px;
@@ -48,6 +54,7 @@ body{
     font-size: 20px;;
     font-weight: 500;
  }
+
  .typeText button{
     border: none;
     outline: none;
@@ -66,6 +73,9 @@ body{
     transform: scale(0.97);
 }
 
+.typeText .tempoIntro {
+    display: inline;
+}
 
 .wrapper .input-field {
     z-index: -999;
@@ -141,6 +151,25 @@ body{
      justify-content: space-between;
 }
 
+.wrapper button{
+    border: none;
+    outline: none;
+    width: fit-content;
+    padding: 4px 6px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #4B0082;
+    transition: transform 0.3s ease;
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.wrapper button:active{
+    transform: scale(0.97);
+}
+
 .content button{
     border: none;
     outline: none;
@@ -152,10 +181,13 @@ body{
     border-radius: 5px;
     background: #4B0082;
     transition: transform 0.3s ease;
+    display: flex;
 }
+
 .content button:active{
     transform: scale(0.97);
 }
+
 .content .result-details {
     display: flex;
     width: calc(100% - 140px);
@@ -187,7 +219,6 @@ body{
 .result-details li:not(:first-child) span{
     font-weight: 500;
 }
-
 
 .result-details li b{
     font-weight: 500;

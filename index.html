@@ -10,13 +10,35 @@
 </head>
 <body>
     <div class="typeText" id="intgame" >
+            <div class="tempoIntro">
         <textarea autofocus type="text" class="manual" id="manualText" placeholder=
-"Bem vindo! 
-Esse simples projeto de um jogo de digitação usando apenas com html, css e javascript. Você tem a opção de jogar com 20 textos aleatorios de Lorem Ipsum ou com o seu texto proprio. Copie nessa area que você me lê o texto que queira digitar ou a deixa em branco para usar os textos aleatorios. Ao resetar o jogo, se optar por trocar a forma do texto, apenas apague o texto digitado neste campo para selecionar a outra opção." ></textarea>
-        <button class="insertButton" onclick="saveText(), resetGame(), hideElement()">Começar</button>
+"Bem vindos! 
+Esse é um simples projeto de um jogo de digitação usando apenas html, css e javascript. Você tem a opção de jogar com 20 textos aleatorios de Lorem Ipsum ou com um texto personalizado por você. 
+
+Como jogar:
+
+Copie nessa area o texto que queira digitar ou a deixa em branco para jogar com os textos aleatorios. Selecione abaixo o tempo maximo do desafio, o tempo só é iniciado apos digitar a primeira letra. Use as metricas de erros, WPM (Palavras por minuto) e CPM (Caracteres por minuto) para acompanhar os seus avanços." ></textarea>
+        
+            
+           
+            <ul class="tempoComeco">
+               
+                    <select name="tempo" id="selecionatempo">
+                    <option value="" disabled selected>Tempo do desafio</option>
+                    <option value="60s">60 segundos</option>
+                    <option value="2m">2 minutos</option>
+                    <option value="5m">5 minutos</option>
+                    <option value="7m">7 minutos</option>
+                    <option value="10m">10 minutos</option>
+                    <option value="infinito">Infinito</option>
+                    </select>
+                    <button class="insertButton" onclick="saveText(), resetGame(), hideElement(), novoTempo()">Começar</button>
+                </ul>
+            </div>
     </div>
 
-    <div class="wrapper" id="game" style="display: none;"">
+    <div class="wrapper" id="game" style="display: none;">
+        <button onclick="hideElement()">Voltar ao inicio</button>
         <input type="text" class="input-field" >
         <div class="content-box">
             <div class="typing-text">
@@ -25,11 +47,11 @@ Esse simples projeto de um jogo de digitação usando apenas com html, css e jav
             <div class="content">
                 <ul class="result-details">
                     <li class="time">
-                        <p>Time Left:</p>
-                        <span><b>60</b>s</span>
+                        <p>Restante:</p>
+                        <span><a id="showTime">60</a><b> segundos</b></span>
                     </li>
                     <li class="mistake">
-                        <p>Mistakes:</p>
+                        <p>Erros:</p>
                         <span>0</span>
                     </li>
                     <li class="wpm">
@@ -41,8 +63,7 @@ Esse simples projeto de um jogo de digitação usando apenas com html, css e jav
                         <span>0</span>
                     </li>
                 </ul>
-                <button onclick="resetGame()">Tentar novamente</button>
-                <button onclick="hideElement()">Comecar novamente</button>
+                <button onclick="resetGame(), novoTempo()">Tentar novamente</button>
             </div>
         </div>
     </div>
