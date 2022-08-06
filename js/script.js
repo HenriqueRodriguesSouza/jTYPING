@@ -14,6 +14,7 @@ maxTime = 60,
 timeLeft = maxTime,
 charIndex = mistakes = isTyping = 0;
 
+
 function novoTempo(){
     var timeSelect = document.getElementById("selecionatempo").selectedIndex;
     switch (timeSelect) {
@@ -65,7 +66,6 @@ function randomParagraph() {
     typingText.addEventListener("click", () => inpField.focus());
 }
 
-
 function initTyping() {
     const characters = typingText.querySelectorAll("span");
     let typedChar = inpField.value.split("")[charIndex];
@@ -103,14 +103,14 @@ function initTyping() {
     }
 }
 
-    function initTimer(){
-        if(timeLeft > 0) {
-            timeLeft--;
-            timeTag.innerText = timeLeft;
-        } else {
-            clearInterval(timer);
-        }
+function initTimer(){
+    if(timeLeft > 0) {
+        timeLeft--;
+        timeTag.innerText = timeLeft;
+    } else {
+        clearInterval(timer);
     }
+}
 
 function resetGame() {
     randomParagraph();
@@ -126,4 +126,3 @@ function resetGame() {
 
 randomParagraph();
 inpField.addEventListener("input", initTyping);
-//tryAgainBtn.addEventListener("click", resetGame);

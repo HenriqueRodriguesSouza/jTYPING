@@ -11,19 +11,19 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #4B0082;
+    background: #4c008294;
 }
 
 
 .wrapper {
-   width: 770px;
+   width: 790px;
    padding: 35px;
    background: #fff; 
    border-radius: 10px;   
 }
   
 .typeText{
-    width: 770px;
+    width: 790px;
     padding: 35px;
     background: #fff; 
     border-radius: 10px;   
@@ -55,7 +55,20 @@ body{
     font-weight: 500;
  }
 
- .typeText button{
+ .tempoComeco select {
+    appearance: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #4B0082;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 8px 9px;
+ }
+
+.typeText button{
     border: none;
     outline: none;
     width: 105px;
@@ -66,7 +79,6 @@ body{
     border-radius: 5px;
     background: #4B0082;
     transition: transform 0.3s ease;
-
 }
 
 .typeText button:active{
