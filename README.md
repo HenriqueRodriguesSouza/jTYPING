@@ -1,3 +1,7 @@
 # jTYPING
-Pequeno projeto de um jogo de digitação feito com javascript.
-Sinta-se a vontade para usa-lo da forma que quiser.
+Simples jogo de digitação feito com javascript.
+
+Baseado no projeto de CodingNepal.
+Link:
+https://www.youtube.com/watch?v=Hg80AjDNnJk&t
+
