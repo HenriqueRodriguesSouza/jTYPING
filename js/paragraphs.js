@@ -1,4 +1,3 @@
-// Vinte textos de lorem ipsum salvos em array para que serem apresentados de forma aleatoria
   const randomP = [    
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec adipiscing tristique risus nec feugiat in. Eget arcu dictum varius duis at consectetur lorem. Ac turpis egestas maecenas pharetra. Id aliquet lectus proin nibh. Enim nunc faucibus a pellentesque sit amet. Tortor at auctor urna nunc id cursus metus. Pretium nibh ipsum consequat nisl vel. Elementum curabitur vitae nunc sed velit. Vestibulum lorem sed risus ultricies tristique. Viverra maecenas accumsan lacus vel facilisis volutpat est velit. Adipiscing tristique risus nec feugiat. Sapien faucibus et molestie ac feugiat sed lectus vestibulum.",
     "In arcu cursus euismod quis viverra nibh cras pulvinar. Libero enim sed faucibus turpis in eu. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Magna ac placerat vestibulum lectus mauris ultrices. At tellus at urna condimentum mattis pellentesque. Nunc lobortis mattis aliquam faucibus purus in. Elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. In metus vulputate eu scelerisque felis imperdiet proin fermentum. Porttitor eget dolor morbi non arcu risus quis varius quam. Suspendisse sed nisi lacus sed viverra. Ut sem viverra aliquet eget sit amet tellus cras. Sapien eget mi proin sed libero enim sed. Feugiat in ante metus dictum at tempor commodo ullamcorper. Amet consectetur adipiscing elit pellentesque habitant. Lacus viverra vitae congue eu consequat ac felis. Tellus pellentesque eu tincidunt tortor aliquam. Non odio euismod lacinia at quis risus sed. Integer quis auctor elit sed vulputate mi sit amet. Enim blandit volutpat maecenas volutpat.", 
@@ -24,7 +23,7 @@
 
   var paragraphs;
 
-//funcao de salvar o texto se usuario colocar digitalo na pagina inicial
+//funcao de salvar o texto se usuario digita-lo na pagina inicial
 function saveText(){
     //salva em uma varialvel o valor inserido no campo de texto manualText
     var savingText = document.getElementById("manualText").value;
@@ -37,9 +36,9 @@ function saveText(){
     //e por ultimo, se houver algum texto escrito no campo manualText ele o salva em paragraphs o transformando em um array para ser usado na funcao randomParagraph
 }
 
-//função para transição da tela de introdução do jogo, aonde podemos coloca o texto personalizado e a tela do game
+//função para transição da tela de introdução do jogo, aonde podemos coloca o texto personalizado, e a tela do game
 function hideElement() { 
-    // armazenamento de variaveis com o ID das divs que precisamos esconder com o elemento display none
+    // armazenamento de variaveis com o ID das divs que precisamos esconder com o elementos com display none
     var intScreen = document.getElementById("intgame");
     var gameScreen = document.getElementById("game");
     if (intScreen.style.display === "none") {

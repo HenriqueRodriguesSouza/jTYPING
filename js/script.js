@@ -14,7 +14,7 @@ maxTime = 60,
 timeLeft = maxTime,
 charIndex = mistakes = isTyping = 0;
 
-
+//funcao apresentacao do tempo selecionado na tela do jogo
 function novoTempo(){
     var timeSelect = document.getElementById("selecionatempo").selectedIndex;
     switch (timeSelect) {
@@ -52,6 +52,7 @@ function novoTempo(){
     }
 }
 
+//funcao para selecao de um paragrafo aleatorio no array paragraphs ou captura do texto digitado e separacao dos caracteres em um arrey com a funcao split usando o separador "" para dividilos entre palavras
 function randomParagraph() {
 
     saveText();
@@ -66,28 +67,29 @@ function randomParagraph() {
     typingText.addEventListener("click", () => inpField.focus());
 }
 
+//funcao para verificar se o caractere digitado é o correto, baseado na posicao de charIndex, e adicionar na div de cada caracter se o mesmo foi digitado corretamente ou incorretamente
 function initTyping() {
     const characters = typingText.querySelectorAll("span");
     let typedChar = inpField.value.split("")[charIndex];
-    if(charIndex < characters.length - 1 && timeLeft > 0) {
+    if(charIndex < characters.length - 1 && timeLeft > 0) { //iniciar o contador e checagem do tempo para o fim do game
         if(!isTyping){
-            timer = setInterval(initTimer, 1000);
+            timer = setInterval(initTimer, 1000);    
             isTyping = true;
         }
-        if(typedChar == null){
+        if(typedChar == null){                      //fazer a remocao do caractere errado apagado
             charIndex--;
-            if(characters[charIndex].classList.contains("incorrect")){
+            if(characters[charIndex].classList.contains("incorrect")){  //remove da div a tag incorrect
                 mistakes--;
             }
             characters[charIndex].classList.remove("correct","incorrect");
         } else {
-            if(characters[charIndex].innerText === typedChar) {
+            if(characters[charIndex].innerText === typedChar) {     //se o caractere for o correto é adiciona na div correct
                 characters[charIndex].classList.add("correct");
-            } else {
+            } else {                                                //se o caractere for o incorreto é adiciona na div incorrect e adicionado um mistakes para apresentar os erros na tela
                 mistakes++;
                 characters[charIndex].classList.add("incorrect");
             }
-            charIndex++;
+            charIndex++;                                            //pular para proxima letra
         }
     
         characters.forEach(span => span.classList.remove("active"));
